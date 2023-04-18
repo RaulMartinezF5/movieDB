@@ -23,6 +23,14 @@ import { RouterLink, RouterView } from 'vue-router';
                 <RouterLink class="nav-link" to="/about">Contact</RouterLink>
               </li>
             </ul>
+            <form class="form-inline">
+      <div class="input-group">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
           </div>
         </div>
       </nav>
@@ -47,17 +55,26 @@ import { RouterLink, RouterView } from 'vue-router';
 
 .navbar-nav{
       display: flex;
-      align-items: center;
       justify-content: flex-end;
+      align-items: center;
       margin-left: auto;
       font-size: large;
-      margin-right: 16%;
+      margin-right: 9%;
+   
 }
 
 .nav-link {
   margin-right: 20px;
 }
 
+.nav-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
 
+.form-inline{
+  display: flex;
+  margin-right: 18%;
+}
 
 </style>

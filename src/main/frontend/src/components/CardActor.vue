@@ -26,7 +26,7 @@
         .card-text{
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
 }
     
 </style>

@@ -4,7 +4,7 @@
         <img src="../assets/avatar.jpeg" class="card-img-top " alt="avatar">
         <div class="card-body">
             <h5 class="card-title">Movie title</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <p class="card-text">Lorem ipsum dolor sit amet, mine consectetur adipiscing elit, sed do eiusmod tempor.</p>
             <a href="#" class="btn btn-primary"> Add Movie</a>
         </div>
     </div>
@@ -19,6 +19,7 @@
       justify-content: center;
       margin-left: auto;
       text-align: center;
+      margin-top: 1vh;
 }
 
 .card-title{
@@ -30,6 +31,6 @@
 .card-text{
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
 }
 </style>
