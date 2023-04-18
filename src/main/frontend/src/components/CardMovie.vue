@@ -20,4 +20,16 @@
       margin-left: auto;
       text-align: center;
 }
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 </style>

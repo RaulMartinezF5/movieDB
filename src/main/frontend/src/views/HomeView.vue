@@ -7,9 +7,7 @@ import CardMovie from '../components/CardMovie.vue';
 </script>
 
 <template>
-  <div class="header">
-  <Header />
-</div>
+  <div class="header"><Header /></div>
    <div class="banner"> <Banner /></div>
 
 <div class="popular-movies"><h2>Popular Movies</h2></div>

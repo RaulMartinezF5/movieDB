@@ -26,6 +26,7 @@
 
     #carouselExampleControls{
         height: 30vh;
+      
     }
     .limit{
         height: 30vh;
