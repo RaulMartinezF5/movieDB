@@ -59,6 +59,7 @@ import CardMovie from '../components/CardMovie.vue';
   top: 0;
   left: 0;
    z-index: 9999;
+
 }
 
 .banner{
