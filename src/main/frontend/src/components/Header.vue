@@ -13,14 +13,15 @@ import { RouterLink, RouterView } from 'vue-router';
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+              
               <li class="nav-item">
-                <RouterLink class="nav-link" to="/">Home</RouterLink>
+                <RouterLink class="nav-link" to="/home">Home</RouterLink>
               </li>
               <li class="nav-item">
                 <RouterLink class="nav-link" to="/mymovies">My Movies</RouterLink>
               </li>
               <li class="nav-item">
-                <RouterLink class="nav-link" to="/about">Contact</RouterLink>
+                <RouterLink class="nav-link" to="/">Login</RouterLink>
               </li>
             </ul>
             <form class="form-inline">

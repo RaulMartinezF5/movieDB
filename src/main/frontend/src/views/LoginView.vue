@@ -1,8 +1,10 @@
 <script setup>
+import Header from '../components/Header.vue';
 
 </script>
 
 <template>
+    <Header />
   <section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex align-items-center justify-content-center h-100">
@@ -46,6 +48,14 @@
 <style lang="scss" scoped>
 @use '../assets/main' as *;
 
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+   z-index: 9999;
+
+}
 .divider:after,
 .divider:before {
 content: "";
