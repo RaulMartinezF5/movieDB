@@ -4,6 +4,21 @@ import Footer from '../components/Footer.vue';
 import Banner from '../components/Banner.vue';
 import CardActor from '../components/CardActor.vue';
 import CardMovie from '../components/CardMovie.vue';
+
+import axios from 'axios';
+
+const apiKey = 'd51d296af8e7cb5883e35484c58d1325';
+const url = `https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`;
+
+axios.get(url)
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+
 </script>
 
 <template>
