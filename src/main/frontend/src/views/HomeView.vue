@@ -8,11 +8,13 @@ import CardMovie from '../components/CardMovie.vue';
 import axios from 'axios';
 
 const apiKey = 'd51d296af8e7cb5883e35484c58d1325';
-const url = `https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`;
+const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+
+let movies = [];
 
 axios.get(url)
   .then(response => {
-    console.log(response.data);
+    movies = response.data.results;
   })
   .catch(error => {
     console.log(error);
@@ -25,24 +27,13 @@ axios.get(url)
   <div class="header"><Header /></div>
    <div class="banner"> <Banner /></div>
 
-<div class="popular-movies"><h2>Popular Movies</h2></div>
+  <div class="popular-movies"><h2>Popular Movies</h2></div>
   <div class="movies">
-    <div class="card-container-movie">
-      <CardMovie />
-    </div>
-    <div class="card-container-movie">
-      <CardMovie />
-    </div>
-    <div class="card-container-movie">
-      <CardMovie />
-    </div>
-    <div class="card-container-movie">
-      <CardMovie />
-    </div>
-    <div class="card-container-movie">
-      <CardMovie />
+    <div class="card-container-movie" v-for="(movie, index) in movies" :key="index" v-if="movies.length">
+      <CardMovie :movie="movie" />
     </div>
   </div>
+
   <div class="popular-actors"><h2>Popular Actors</h2></div>
 
   <div class="actor">
@@ -95,11 +86,16 @@ axios.get(url)
   justify-content: space-evenly;
   
   .card-container-movie {
-    width: 18%;
+    width: 20%;
     margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
-
+.card-container-movie > * {
+  width: 100%;
+  margin: 0 10px 20px 0;
+}
 .popular-actors {
   display: flex;
   justify-content: center;
