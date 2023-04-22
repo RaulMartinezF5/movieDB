@@ -5,35 +5,45 @@ import Banner from '../components/Banner.vue';
 import CardActor from '../components/CardActor.vue';
 import CardMovie from '../components/CardMovie.vue';
 
+import { onMounted, ref } from 'vue';
 import axios from 'axios';
 
 const apiKey = 'd51d296af8e7cb5883e35484c58d1325';
 const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
-let movies = [];
+let movies = ref([]);
 
-axios.get(url)
-  .then(response => {
-    movies = response.data.results;
-  })
-  .catch(error => {
-    console.log(error);
+onMounted(() => {
+    axios.get(url)
+      .then(response => {
+        movies.value = response.data.results;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   });
 
+  const updateMovies = (newData) => {
+  movies.value = newData;
+}
 
+const watchMovies = () => {
+  return {movies};
+}
 </script>
 
 <template>
-  <div class="header"><Header /></div>
-   <div class="banner"> <Banner /></div>
-
+   <div class="header"><Header /></div>
+  <div class="banner"> <Banner /></div>
   <div class="popular-movies"><h2>Popular Movies</h2></div>
-  <div class="movies" v-if="movies.length">
-    <div class="card-container-movie" v-for="(movie, index) in movies" :key="index" >
-      <CardMovie :movie="movie" />
+  
+  <div v-if="movies.length">
+    <div class="movies">
+      <div class="card-container-movie" v-for="(movie, index) in movies" :key="index" >
+        <CardMovie :movie="movie" />
+      </div>
     </div>
   </div>
-
   <div class="popular-actors"><h2>Popular Actors</h2></div>
 
   <div class="actor">

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+
+</script>
 <template>
     <div class="card">
         <img src="../assets/avatar.jpeg" class="card-img-top " alt="avatar">
