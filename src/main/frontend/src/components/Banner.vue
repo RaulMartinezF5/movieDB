@@ -3,13 +3,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner limit">
             <div class="carousel-item active">
-                <img src="../assets/avatar.jpeg" class="d-block w-100" alt="avatar">
+                <img src="../assets/mario-bros-.jpg" class="d-block w-100" alt="avatar">
             </div>
             <div class="carousel-item">
-                <img src="../assets/avatar.jpeg" class="d-block w-100" alt="avatar">
+                <img src="../assets/avatar3.jpg" class="d-block w-100" alt="avatar">
             </div>
             <div class="carousel-item">
-                <img src="../assets/avatar.jpeg" class="d-block w-100" alt="avatar">
+                <img src="../assets/x-men.jpg" class="d-block w-100" alt="avatar">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

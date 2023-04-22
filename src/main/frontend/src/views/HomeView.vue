@@ -28,8 +28,8 @@ axios.get(url)
    <div class="banner"> <Banner /></div>
 
   <div class="popular-movies"><h2>Popular Movies</h2></div>
-  <div class="movies">
-    <div class="card-container-movie" v-for="(movie, index) in movies" :key="index" v-if="movies.length">
+  <div class="movies" v-if="movies.length">
+    <div class="card-container-movie" v-for="(movie, index) in movies" :key="index" >
       <CardMovie :movie="movie" />
     </div>
   </div>
