@@ -32,6 +32,7 @@ const addToMyMovies = () => {
 .btn-primary {
       width: 80%;
       margin: auto;
+      margin-left: 0.4vw;
       text-align: center;
       margin-top: 1vh;
       bottom: 10px;
