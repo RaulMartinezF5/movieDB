@@ -4,9 +4,9 @@
 
 <template>
     <div class="footer">
-      <h5>Copyright © Movie DB, inc 2023</h5>
+      <h5>Copyright © Movie RM, inc 2023</h5>
       <div class="email">
-        <h5>info@moviedb.com</h5>
+        <h5>info@movierm.com</h5>
       </div>
     </div> 
 </template>
