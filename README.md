@@ -20,7 +20,7 @@ Una vez aprobado el prototype e instalado Vue, se desarrolló la estructura HTML
 ### CSS
 Se personalizó la web para que visualmente se vea como el prototipo aprobado.
 ### JavaScript
-A traves de JS y Vue, desarrollamos las funciones necesarias para cumplir con los requisitos solicitados:
+A traves de JS y Vue, desarrolle las funciones necesarias para cumplir con los requisitos solicitados:
 - SPA (*Single Page Aplication*)
 - Acceso a la API externa
 - Sección de *Home Page* y de Favoritos
@@ -36,5 +36,11 @@ A traves de JS y Vue, desarrollamos las funciones necesarias para cumplir con lo
 - Figma
 - Visual Studio Code
 - VUE 3
+- Boostrap
 - GitHub
 - La API de Peliculas de [The Movie DB](https://www.themoviedb.org/).
+## Istalacion
+- Clonar repositorio
+- Ejecutamos el comando:npm install
+- Para poder visualizar la app es necesario transladarse a la carpeta frontend, para ello usamos el comando: cd src/main/frontend
+- Por ultimo ejecutamos el comando: npm run dev
