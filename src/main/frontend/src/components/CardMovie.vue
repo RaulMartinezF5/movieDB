@@ -8,9 +8,6 @@ const props = defineProps({
   },
 })
 
-const addToMyMovies = () => {
-  // Aquí podrías utilizar una función para emitir un evento que añada la película a "My Movies"
-}
 </script>
 <template>
    <div class="card">
