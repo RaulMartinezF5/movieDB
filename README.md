@@ -12,7 +12,7 @@ Requisitos :
 ### *Sketch* y prototype 
 <img width="960" alt="Captura de pantalla 2023-04-24 a las 12 53 00" src="https://user-images.githubusercontent.com/116883797/233992386-d38c13ea-953d-43ab-a1e8-52281e59e17f.png">
 
-Usando Figma desarrolle el *sketch* y prototipo de cómo se veria la web.
+Usando Figma desarrolle el *sketch* y prototype de cómo se veria la web.
 ### VUE
 Se instala Vue para poder acceder a sus opciones de módulos, *stores*, *router* y demás herramientas necesarias.
 ### Estructura HTML
