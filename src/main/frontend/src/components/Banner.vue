@@ -6,7 +6,7 @@
                 <img src="../assets/mario-bros-.jpg" class="d-block w-100" alt="avatar">
             </div>
             <div class="carousel-item">
-                <img src="../assets/avatar-banner (1).jpeg" class="d-block w-100" alt="avatar">
+                <img src="../assets/avatar-banner (2).jpeg" class="d-block w-100" alt="avatar">
             </div>
             <div class="carousel-item">
                 <img src="../assets/spider-man.jpeg" class="d-block w-100" alt="avatar">

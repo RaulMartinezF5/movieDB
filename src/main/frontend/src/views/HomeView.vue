@@ -12,6 +12,7 @@ const apiKey = 'd51d296af8e7cb5883e35484c58d1325';
 const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
 let movies = ref([]);
+let actors = ref([]);
 
 onMounted(() => {
     axios.get(url)
@@ -23,13 +24,27 @@ onMounted(() => {
       });
   });
 
-  const updateMovies = (newData) => {
-  movies.value = newData;
-}
+  const fetchActors = () => {
+  axios.get(`https://api.themoviedb.org/3/person/popular?api_key=${apiKey}`)
+    .then(response => {
+      actors.value = response.data.results;
+    })
+    .catch(error => {
+      console.log(error);
+    });
+};
+onMounted(() => {
+  axios.get(url)
+    .then(response => {
+      movies.value = response.data.results;
+    })
+    .catch(error => {
+      console.log(error);
+    });
 
-const watchMovies = () => {
-  return {movies};
-}
+  fetchActors();
+});
+
 </script>
 
 <template>
@@ -45,24 +60,12 @@ const watchMovies = () => {
     </div>
   </div>
   <div class="popular-actors"><h2>Popular Actors</h2></div>
-
-  <div class="actor">
-    <div class="card-container-actor">
-      <CardActor />
-    </div>
-    <div class="card-container-actor">
-      <CardActor />
-    </div>
-      <div class="card-container-actor">
-        <CardActor />
-      </div>
-      <div class="card-container-actor">
-        <CardActor />
-      </div>
-      <div class="card-container-actor">
-        <CardActor />
-      </div>
-    </div>
+  <div class="actors" v-if="actors.length">
+  <div class="card-container-actor" v-for="(actor, index) in 5" :key="index">
+    <CardActor :actor="actor" />
+  </div>
+</div>
+ 
     <div class="footer"><Footer /></div>
 </template>
 
@@ -112,18 +115,19 @@ const watchMovies = () => {
   text-align: center;
   margin-top: 3vh;
 }
-.actor {
+.actors {
   max-width: 1200px;
   margin: 2% auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
+
   .card-container-actor {
     width: 20%;
     margin-bottom: 2%;
   }
 }
+
 .footer {
   width: 100%;
   border-top: 1px solid black;
