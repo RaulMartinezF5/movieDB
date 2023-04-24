@@ -44,5 +44,5 @@ A traves de JS y Vue, desarrolle las funciones necesarias para cumplir con los r
 - Ejecutamos el comando:npm install
 - Para poder visualizar la app es necesario transladarse a la carpeta frontend, para ello usamos el comando: cd src/main/frontend
 - npm -D bootstrap
-- npm -D sash
+- npm -D sass
 - Por ultimo ejecutamos el comando: npm run dev
